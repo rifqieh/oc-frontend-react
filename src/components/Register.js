@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default () => {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <div
       style={{ backgroundColor: '#384B60', width: '100vw', height: '100vh' }}
@@ -16,12 +21,18 @@ export default () => {
               <form>
                 <div className="form-group">
                   <label for="nama">Nama Lengkap</label>
-                  <input type="text" className="form-control" id="nama" />
+                  <input type="text" className="form-control" id="nama"
+                    onChange={(e) => {
+                      setName(e.target.value)
+                    }} />
                 </div>
 
                 <div className="form-group">
-                  <label for="username">Username</label>
-                  <input type="text" className="form-control" id="username" />
+                  <label for="username">Email</label>
+                  <input type="text" className="form-control" id="email"
+                    onChange={(e) => {
+                      setEmail(e.target.value)
+                    }} />
                 </div>
 
                 <div className="form-group">
@@ -30,6 +41,9 @@ export default () => {
                     type="password"
                     className="form-control"
                     id="password"
+                    onChange={(e) => {
+                      setPassword(e.target.value)
+                    }}
                   />
                 </div>
 
