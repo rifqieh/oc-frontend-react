@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default (props) => {
-  const handleSubmit = e => { }
+export default props => {
+  const handleSubmit = e => {}
 
-  const status = props.status;
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const status = props.status
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   return (
-
-
     <div
       style={{ backgroundColor: '#384B60', width: '100vw', height: '100vh' }}
     >
@@ -29,9 +27,10 @@ export default (props) => {
                     className="form-control"
                     value={email}
                     id="email"
-                    onChange={(e) => {
+                    onChange={e => {
                       setEmail(e.target.value)
-                    }} />
+                    }}
+                  />
                 </div>
                 <div className="form-group">
                   <label for="password">Password</label>
@@ -40,18 +39,17 @@ export default (props) => {
                     value={password}
                     className="form-control"
                     id="password"
-                    onChange={(e) => {
+                    onChange={e => {
                       setPassword(e.target.value)
                     }}
                   />
                 </div>
 
-                <Link to="/dashboard/admin">
+                <Link to="/dashboard/exam">
                   <button type="submit" className="tombol">
                     Login
                   </button>
                 </Link>
-
               </form>
             </div>
           </div>
