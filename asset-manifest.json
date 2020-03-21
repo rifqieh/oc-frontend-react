@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/oc-frontend-react/static/css/main.b4c94c7a.chunk.css",
+    "main.js": "/oc-frontend-react/static/js/main.5ea0c825.chunk.js",
+    "main.js.map": "/oc-frontend-react/static/js/main.5ea0c825.chunk.js.map",
+    "runtime-main.js": "/oc-frontend-react/static/js/runtime-main.e669a2bb.js",
+    "runtime-main.js.map": "/oc-frontend-react/static/js/runtime-main.e669a2bb.js.map",
+    "static/css/2.4121280a.chunk.css": "/oc-frontend-react/static/css/2.4121280a.chunk.css",
+    "static/js/2.cbeb46d4.chunk.js": "/oc-frontend-react/static/js/2.cbeb46d4.chunk.js",
+    "static/js/2.cbeb46d4.chunk.js.map": "/oc-frontend-react/static/js/2.cbeb46d4.chunk.js.map",
+    "index.html": "/oc-frontend-react/index.html",
+    "precache-manifest.b617d9412088d16abd9250c85d4dadbf.js": "/oc-frontend-react/precache-manifest.b617d9412088d16abd9250c85d4dadbf.js",
+    "service-worker.js": "/oc-frontend-react/service-worker.js",
+    "static/css/2.4121280a.chunk.css.map": "/oc-frontend-react/static/css/2.4121280a.chunk.css.map",
+    "static/css/main.b4c94c7a.chunk.css.map": "/oc-frontend-react/static/css/main.b4c94c7a.chunk.css.map",
+    "static/js/2.cbeb46d4.chunk.js.LICENSE.txt": "/oc-frontend-react/static/js/2.cbeb46d4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e669a2bb.js",
+    "static/css/2.4121280a.chunk.css",
+    "static/js/2.cbeb46d4.chunk.js",
+    "static/css/main.b4c94c7a.chunk.css",
+    "static/js/main.5ea0c825.chunk.js"
+  ]
+}
