@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default () => {
+export default (props) => {
   const handleSubmit = e => { }
 
+  const status = props.status;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
+
+
     <div
       style={{ backgroundColor: '#384B60', width: '100vw', height: '100vh' }}
     >
@@ -22,7 +25,7 @@ export default () => {
                 <div className="form-group">
                   <label for="email">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     className="form-control"
                     value={email}
                     id="email"
@@ -50,7 +53,7 @@ export default () => {
                 </Link>
                 <div style={{ marginTop: '10px' }}>
                   Belum punya akun?
-                  <Link to="/register/teacher"> Daftar disini</Link>
+                  <Link to={`/register/${status}`}> Daftar disini</Link>
                 </div>
               </form>
             </div>

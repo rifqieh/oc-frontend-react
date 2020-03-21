@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default () => {
+export default (props) => {
+
+  const status = props.status;
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -28,8 +30,8 @@ export default () => {
                 </div>
 
                 <div className="form-group">
-                  <label for="username">Email</label>
-                  <input type="text" className="form-control" id="email"
+                  <label for="email">Email</label>
+                  <input type="email" className="form-control" id="email"
                     onChange={(e) => {
                       setEmail(e.target.value)
                     }} />
@@ -54,7 +56,7 @@ export default () => {
                 </Link>
                 <div style={{ marginTop: '10px' }}>
                   Sudah punya akun?
-                  <Link to="/login/teacher"> Masuk disini</Link>
+                  <Link to={`/login/${status}`}> Masuk disini</Link>
                 </div>
               </form>
             </div>
