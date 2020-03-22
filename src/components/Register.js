@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
-export default (props) => {
+export default props => {
+  const status = props.status
 
-  const status = props.status;
-
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   return (
     <div
@@ -23,18 +23,26 @@ export default (props) => {
               <form>
                 <div className="form-group">
                   <label for="nama">Nama Lengkap</label>
-                  <input type="text" className="form-control" id="nama"
-                    onChange={(e) => {
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="nama"
+                    onChange={e => {
                       setName(e.target.value)
-                    }} />
+                    }}
+                  />
                 </div>
 
                 <div className="form-group">
                   <label for="email">Email</label>
-                  <input type="email" className="form-control" id="email"
-                    onChange={(e) => {
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    onChange={e => {
                       setEmail(e.target.value)
-                    }} />
+                    }}
+                  />
                 </div>
 
                 <div className="form-group">
@@ -43,13 +51,13 @@ export default (props) => {
                     type="password"
                     className="form-control"
                     id="password"
-                    onChange={(e) => {
+                    onChange={e => {
                       setPassword(e.target.value)
                     }}
                   />
                 </div>
 
-                <Link to="/dashboard/exam">
+                <Link to={`/dashboard/${status}/classroom`}>
                   <button type="submit" className="tombol">
                     Register
                   </button>

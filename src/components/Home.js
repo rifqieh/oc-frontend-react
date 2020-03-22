@@ -15,9 +15,9 @@ function Home() {
       }}
     >
       <h1 className="container text-homepage">
-        Dapatkan akses ujian online di sekolah anda
+        Dapatkan akses kelas online untuk sekolah anda
       </h1>
-      <p style={{ marginTop: '75px' }}>Masuk Dengan</p>
+      <p style={{ marginTop: '75px' }}>Masuk sebagai</p>
       <div className="row justify-content-center">
         <Link to="/login/teacher">
           <button

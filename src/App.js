@@ -38,7 +38,14 @@ const App = () => {
           path="/register/student"
           component={() => <Register status="student" />}
         />
-        <Route path="/dashboard" component={Dashboard} />
+        <Route
+          path="/dashboard/teacher"
+          component={() => <Dashboard status="teacher" />}
+        />
+        <Route
+          path="/dashboard/student"
+          component={() => <Dashboard status="student" />}
+        />
       </div>
     </HashRouter>
   )

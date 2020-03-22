@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
-import Exam from './Exam'
+import Classroom from './Classroom'
 import Profile from './Profile'
 
-export default () => {
+export default props => {
+  const status = props.status
+  console.log(props.status)
+
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       <div className="row">
@@ -22,21 +25,21 @@ export default () => {
                 href="#"
                 style={{ color: '#fff', fontWeight: 'bold' }}
               >
-                Online Exam
+                Online Class
               </h4>
             </li>
             <li className="nav-item" style={{ marginTop: '10px' }}>
               <Link
-                to="/dashboard/exam"
+                to={`/dashboard/${status}/classroom`}
                 className="nav-link"
                 style={{ color: '#fff' }}
               >
-                EXAM
+                CLASS
               </Link>
             </li>
             <li className="nav-item" style={{ marginTop: '10px' }}>
               <Link
-                to="/dashboard/profile"
+                to={`/dashboard/${status}/profile`}
                 className="nav-link"
                 style={{ color: '#fff' }}
               >
@@ -58,11 +61,11 @@ export default () => {
           }}
         >
           <Switch>
-            <Route path="/dashboard/exam">
+            <Route path={`/dashboard/${status}/classroom`}>
               {' '}
-              <Exam />{' '}
+              <Classroom />{' '}
             </Route>
-            <Route path="/dashboard/profile">
+            <Route path={`/dashboard/${status}/profile`}>
               {' '}
               <Profile />{' '}
             </Route>
